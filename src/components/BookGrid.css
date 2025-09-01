@@ -1,0 +1,25 @@
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* Always 3 per row on large screens */
+  gap: 0 32px;                               /* Equal spacing in all directions */
+  max-width: 1200px;                       /* Keeps content centered */
+  margin: 40px auto;                       /* Center horizontally */
+  padding: 0 20px;                         /* Space from screen edges */
+  box-sizing: border-box;
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 900px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .book-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
